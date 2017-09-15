@@ -16,5 +16,6 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+package-lock.json
 node_modules
 *.lnk

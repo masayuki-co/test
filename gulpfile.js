@@ -7,7 +7,7 @@ let pug = require('gulp-pug');
 
 
 gulp.task('stylus', () => {
-	return gulp.src('./_dev/css/style.styl')
+	return gulp.src('./_dev/css/*.styl')
 		.pipe(stylus())
 		.pipe(plumber({
 			errorHandler: function(err) {
@@ -15,6 +15,18 @@ gulp.task('stylus', () => {
 			}
 		}))
 		.pipe(gulp.dest('./htdocs/css'));
+});
+
+//local test
+gulp.task('stylus0', () => {
+	return gulp.src('./_dev/css/*.styl')
+		.pipe(stylus())
+		.pipe(plumber({
+			errorHandler: function(err) {
+				console.log(err.messageFormatted);
+			}
+		}))
+		.pipe(gulp.dest('../../../Downloads/InstantWP_4.5/iwpserver/htdocs/common/css/'));
 });
 
 
